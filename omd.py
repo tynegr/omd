@@ -1,5 +1,3 @@
-# Guido van Rossum <guido@python.org>
-
 def step1():
     print(
         'Утка-маляр 🦆 решила выпить зайти в бар. '
@@ -8,7 +6,7 @@ def step1():
     option = ''
     options = {'да': True, 'нет': False}
     while option not in options:
-        print('Выберите: {}/{}'.format(*options))
+        print(f'Выберите: {"/".join(options)}')
         option = input()
 
     if options[option]:
