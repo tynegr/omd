@@ -1,0 +1,20 @@
+(base) egortishchenko@MacBook-Pro-Egor TESTS_DZ % python -m doctest -o NORMALIZE_WHITESPACE -v issue_1.py 
+
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('LEBRON_JAMES') # doctest: +IGNORE_EXCEPTION_DETAIL
+Expecting:
+    Traceback (most recent call last):
+    KeyError:
+ok
+1 items had no tests:
+    issue_1
+1 items passed all tests:
+   2 tests in issue_1.encode
+2 tests in 2 items.
+2 passed and 0 failed.
+Test passed.

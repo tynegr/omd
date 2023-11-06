@@ -1,0 +1,16 @@
+(base) egortishchenko@MacBook-Pro-Egor TESTS_DZ % pytest -v issue_2.py                        
+======================================================================== test session starts =========================================================================
+platform darwin -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0 -- /Users/egortishchenko/opt/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/egortishchenko/PycharmProjects/pythonProject1/.idea/TESTS_DZ
+plugins: anyio-3.5.0, dash-2.9.1
+collected 5 items                                                                                                                                                    
+
+issue_2.py::test_decode[-- .---   .. ...   - .... .   --. --- .- --MJISTHEGOAT] PASSED                                                                         [ 20%]
+issue_2.py::test_decode[.-. ..- ... ... . .-.. .-- . ... - -... .-. .. -.-. -.--RUSSELWESTBRICK] PASSED                                                        [ 40%]
+issue_2.py::test_decode[.- ...- .. - --- .. ... --. --- --- -..-AVITOISGOOD] PASSED                                                                            [ 60%]
+issue_2.py::test_decode[.--. -.-- - .... --- -.-PYTHON] PASSED                                                                                                 [ 80%]
+issue_2.py::test_decode[-.-. .--. .-.. ..- ... .--. .-.. ..- ...-CPLUSPLUS] PASSED                                                                             [100%]
+
+========================================================================= 5 passed in 0.01s ==========================================================================
+(base) egortishchenko@MacBook-Pro-Egor TESTS_DZ %
