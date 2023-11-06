@@ -25,8 +25,8 @@ def fit_transform(*args: str) -> List[Tuple[str, List[int]]]:
 
     return transformed_rows
 
-class TestFitTransform(unittest.TestCase):
 
+class TestFitTransform(unittest.TestCase):
     def test_fit_transform_one_word(self):
         """
             Тестируем, что функция корректно кодирует одну строку
@@ -62,19 +62,20 @@ class TestFitTransform(unittest.TestCase):
 
     def test_fit_transform_no_arguments(self):
         """
-            Тестируем, что функция вызывает исключение при отсутствии аргументов
+            Тестим, что функция вызывает исключение при отсутствии аргументов
         """
         with self.assertRaises(TypeError):
             fit_transform()
 
     def test_fit_transform_assertNotIn(self):
         """
-            Тестируем, что функция правильно обрабатывает отсутствующие категории
+            Тестим, что функция правильно обрабатывает отсутствующие категории
         """
         input_data = ['curry', 'durant', 'irving']
         result = fit_transform(*input_data)
         for category, _ in result:
             self.assertNotIn(category, ['kareem', 'iverson'])
+            
 
 if __name__ == '__main__':
     unittest.main()
