@@ -34,8 +34,8 @@ class TestWhatIsYearNow(unittest.TestCase):
     @patch('urllib.request.urlopen')
     def test_DMY(self, mock_urlopen):
         mock_response = {'currentDateTime': '06.11.2023'}
-        mock_urlopen.return_value.__enter__.return_value.read.return_value = json.dumps(
-            mock_response).encode('utf-8')
+        mock_urlopen.return_value.__enter__.return_value.read.return_value = \
+            json.dumps(mock_response).encode('utf-8')
 
         year = what_is_year_now()
         self.assertEqual(year, 2023)
@@ -43,18 +43,17 @@ class TestWhatIsYearNow(unittest.TestCase):
     @patch('urllib.request.urlopen')
     def test_YMD(self, mock_urlopen):
         mock_response = {'currentDateTime': '2023-11-06'}
-        mock_urlopen.return_value.__enter__.return_value.read.return_value = json.dumps(
-            mock_response).encode('utf-8')
+        mock_urlopen.return_value.__enter__.return_value.read.return_value = \
+            json.dumps(mock_response).encode('utf-8')
 
         year = what_is_year_now()
         self.assertEqual(year, 2023)
-
-
+        
     @patch('urllib.request.urlopen')
     def test_inappropriate_format(self, mock_urlopen):
         mock_response = {'currentDateTime': '2023/11/06'}
-        mock_urlopen.return_value.__enter__.return_value.read.return_value = json.dumps(
-            mock_response).encode('utf-8')
+        mock_urlopen.return_value.__enter__.return_value.read.return_value \
+            = json.dumps(mock_response).encode('utf-8')
 
         with self.assertRaises(ValueError):
             what_is_year_now()
@@ -62,8 +61,8 @@ class TestWhatIsYearNow(unittest.TestCase):
     @patch('urllib.request.urlopen')
     def test_missing_year(self, mock_urlopen):
         mock_response = {'currentDateTime': '11-06'}
-        mock_urlopen.return_value.__enter__.return_value.read.return_value = json.dumps(
-            mock_response).encode('utf-8')
+        mock_urlopen.return_value.__enter__.return_value.read.return_value \
+            = json.dumps(mock_response).encode('utf-8')
 
         with self.assertRaises(IndexError):
             what_is_year_now()
@@ -71,11 +70,13 @@ class TestWhatIsYearNow(unittest.TestCase):
     @patch('urllib.request.urlopen')
     def test_missing_datetime(self, mock_urlopen):
         mock_response = {'noDatetime': 'invalid'}
-        mock_urlopen.return_value.__enter__.return_value.read.return_value = json.dumps(
-            mock_response).encode('utf-8')
+        mock_urlopen.return_value.__enter__.return_value.read.return_value \
+            = json.dumps(mock_response).encode('utf-8')
 
         with self.assertRaises(KeyError):
             what_is_year_now()
 
+
 if __name__ == '__main__':
     unittest.main()
+    
