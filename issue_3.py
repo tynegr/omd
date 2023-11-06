@@ -3,10 +3,10 @@ import unittest
 
 
 def fit_transform(*args: str) -> List[Tuple[str, List[int]]]:
-    '''
+    """
     fit_transform(iterable)
     fit_transform(arg1, arg2, *args)
-    '''
+    """
     if len(args) == 0:
         raise TypeError('expected at least 1 arguments, got 0')
 
@@ -28,18 +28,18 @@ def fit_transform(*args: str) -> List[Tuple[str, List[int]]]:
 class TestFitTransform(unittest.TestCase):
 
     def test_fit_transform_one_word(self):
-        '''
+        """
             Тестируем, что функция корректно кодирует одну строку
-        '''
+        """
         input_data = 'nuggets'
         expected_result = [('nuggets', [1])]
         result = fit_transform(input_data)
         self.assertEqual(result, expected_result)
 
     def test_fit_transform_list_of_words(self):
-        '''
+        """
             Тестируем, что функция корректно кодирует список строк
-        '''
+        """
         input_data = ['clippers', 'nicks', 'lakers', 'bulls']
         expected_result = [
             ('clippers', [0, 0, 0, 1]),
@@ -51,9 +51,9 @@ class TestFitTransform(unittest.TestCase):
         self.assertEqual(result, expected_result)
 
     def test_fit_transform_missed_word(self):
-        '''
+        """
             Тестируем, что функция правильно обрабатывает пустые строки
-        '''
+        """
         input_data = ['lebron', '', 'james']
         expected_result = [('lebron', [0, 0, 1]), ('', [0, 1, 0]),
                            ('james', [1, 0, 0])]
@@ -61,16 +61,16 @@ class TestFitTransform(unittest.TestCase):
         self.assertEqual(result, expected_result)
 
     def test_fit_transform_no_arguments(self):
-        '''
+        """
             Тестируем, что функция вызывает исключение при отсутствии аргументов
-        '''
+        """
         with self.assertRaises(TypeError):
             fit_transform()
 
     def test_fit_transform_assertNotIn(self):
-        '''
+        """
             Тестируем, что функция правильно обрабатывает отсутствующие категории
-        '''
+        """
         input_data = ['curry', 'durant', 'irving']
         result = fit_transform(*input_data)
         for category, _ in result:
