@@ -39,15 +39,16 @@ def decode(morse_message: str) -> str:
 @pytest.mark.parametrize("morse, expected", [
     ('-- .---   .. ...   - .... .   --. --- .- -',
      'MJISTHEGOAT'),
-    ('.-. ..- ... ... . .-.. .-- . ... - -... .-. .. -.-. -.-', 'RUSSELWESTBRICK'),
+    ('.-. ..- ... ... . .-.. .-- . ... - -... .-. .. -.-. -.-', 
+     'RUSSELWESTBRICK'),
     ('.- ...- .. - --- .. ... --. --- --- -..', 'AVITOISGOOD'),
     ('.--. -.-- - .... --- -.', 'PYTHON'),
     ('-.-. .--. .-.. ..- ... .--. .-.. ..- ...', 'CPLUSPLUS'),
 ])
-
 def test_decode(morse, expected):
     decoded = decode(morse)
     assert decoded == expected
+
 
 if __name__ == '__main__':
     pytest.main()
