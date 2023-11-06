@@ -1,0 +1,9 @@
+(base) egortishchenko@MacBook-Pro-Egor TESTS_DZ % python -m unittest -v issue_5.py 
+test_DMY (issue_5.TestWhatIsYearNow) ... ok
+test_YMD (issue_5.TestWhatIsYearNow) ... ok
+test_inappropriate_format (issue_5.TestWhatIsYearNow) ... ok
+test_missing_datetime (issue_5.TestWhatIsYearNow) ... ok
+test_missing_year (issue_5.TestWhatIsYearNow) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.004s
