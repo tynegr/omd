@@ -1,0 +1,15 @@
+(base) egortishchenko@MacBook-Pro-Egor TESTS_DZ % python -m unittest -v issue_3.py 
+
+test_fit_transform_assertNotIn (issue_3.TestFitTransform)
+Тестируем, что функция правильно обрабатывает отсутствующие категории ... ok
+test_fit_transform_list_of_words (issue_3.TestFitTransform)
+Тестируем, что функция корректно кодирует список строк ... ok
+test_fit_transform_missed_word (issue_3.TestFitTransform)
+Тестируем, что функция правильно обрабатывает пустые строки ... ok
+test_fit_transform_no_arguments (issue_3.TestFitTransform)
+Тестируем, что функция вызывает исключение при отсутствии аргументов ... ok
+test_fit_transform_one_word (issue_3.TestFitTransform)
+Тестируем, что функция корректно кодирует одну строку ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s

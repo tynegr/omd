@@ -1,0 +1,16 @@
+(base) egortishchenko@MacBook-Pro-Egor TESTS_DZ % python -m pytest -v issue_4.py
+
+======================================================================== test session starts =========================================================================
+platform darwin -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0 -- /Users/egortishchenko/opt/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/egortishchenko/PycharmProjects/pythonProject1/.idea/TESTS_DZ
+plugins: anyio-3.5.0, dash-2.9.1
+collected 5 items                                                                                                                                                    
+
+issue_4.py::test_fit_transform_one_word PASSED                                                                                                                 [ 20%]
+issue_4.py::test_fit_transform_list_of_words PASSED                                                                                                            [ 40%]
+issue_4.py::test_fit_transform_missed_word PASSED                                                                                                              [ 60%]
+issue_4.py::test_fit_transform_no_arguments PASSED                                                                                                             [ 80%]
+issue_4.py::test_fit_transform_assertnotin PASSED                                                                                                              [100%]
+
+========================================================================= 5 passed in 0.01s =======================================================================
