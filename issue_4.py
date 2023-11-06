@@ -35,6 +35,7 @@ def test_fit_transform_one_word():
     result = fit_transform(input_data)
     assert result == expected_result
 
+
 def test_fit_transform_list_of_words():
     """
         Тестируем, что функция корректно кодирует список строк
@@ -49,6 +50,7 @@ def test_fit_transform_list_of_words():
     result = fit_transform(*input_data)
     assert result == expected_result
 
+
 def test_fit_transform_missed_word():
     """
         Тестируем, что функция правильно обрабатывает пустые строки
@@ -59,6 +61,7 @@ def test_fit_transform_missed_word():
     result = fit_transform(*input_data)
     assert result == expected_result
 
+
 def test_fit_transform_no_arguments():
     """
         Тестируем, что функция вызывает исключение при отсутствии аргументов
@@ -67,7 +70,8 @@ def test_fit_transform_no_arguments():
     with pytest.raises(TypeError):
         fit_transform()
 
-def test_fit_transform_assertNotIn():
+
+def test_fit_transform_assertnotin():
     """
         Тестируем, что функция правильно обрабатывает отсутствующие категории
     """
@@ -76,5 +80,7 @@ def test_fit_transform_assertNotIn():
     for category, _ in result:
         assert category not in ['kareem', 'iverson']
 
+
 if __name__ == '__main__':
     pytest.main()
+    
